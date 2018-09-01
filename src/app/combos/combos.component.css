@@ -1,0 +1,23 @@
+.btn-group {
+    width: 100%; 
+}
+.btn-group:active {
+    
+    box-shadow: 0 5px rgb(4, 17, 202);
+    transform: translateY(4px);
+  }
+
+.sera {
+ 
+    width: 100%;
+    height: 40px;
+    
+    border: 1px solid black;
+ 
+    background: white;
+    color: lightslategrey;
+
+}
+.dropdown-menu{
+    width: 100%;
+}

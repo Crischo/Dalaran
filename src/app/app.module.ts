@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { CabezaComponent } from './cabeza/cabeza.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PieComponent } from './pie/pie.component';
+import { CombosComponent } from './combos/combos.component';
+
 
 
 @NgModule({
@@ -12,7 +14,8 @@ import { PieComponent } from './pie/pie.component';
     AppComponent,
     CabezaComponent,
     CuerpoComponent,
-    PieComponent
+    PieComponent,
+    CombosComponent
   ],
   imports: [
     BrowserModule
