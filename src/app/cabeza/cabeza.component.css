@@ -8,4 +8,9 @@
  #navbarSupportedContent {
     text-decoration: none;
     background-color: white;
-	}
+    }
+    .imgRedonda {
+        width:50px;
+        height:50px;
+        border-radius:150px;
+    }

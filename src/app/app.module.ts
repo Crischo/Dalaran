@@ -6,6 +6,7 @@ import { CabezaComponent } from './cabeza/cabeza.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PieComponent } from './pie/pie.component';
 import { CombosComponent } from './combos/combos.component';
+import { MensajeComponent } from './mensaje/mensaje.component';
 
 
 
@@ -15,7 +16,8 @@ import { CombosComponent } from './combos/combos.component';
     CabezaComponent,
     CuerpoComponent,
     PieComponent,
-    CombosComponent
+    CombosComponent,
+    MensajeComponent
   ],
   imports: [
     BrowserModule
