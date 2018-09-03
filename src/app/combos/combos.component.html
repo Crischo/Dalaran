@@ -3,8 +3,7 @@
       Carreras
     </button>
     <div class="dropdown-menu">
-      <button class="dropdown-item" type="button">Action</button>
-      <button class="dropdown-item" type="button">Another action</button>
-      <button class="dropdown-item" type="button">Something else here</button>
+      <button class="dropdown-item" type="button" *ngFor ="let post of posts"><span class="span">{{post.nombre}}</span></button>
+      
     </div>
   </div>

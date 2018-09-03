@@ -23,3 +23,13 @@
     width: 100%;
     
 }
+.span{
+    width: auto;
+    white-space: initial;
+    overflow:visible;
+    cursor: pointer;
+    font-size: 12px;
+}
+.dropdown-item:hover{
+    background-color: rgb(15, 155, 236);
+}

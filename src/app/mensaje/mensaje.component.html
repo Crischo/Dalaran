@@ -1,18 +1,14 @@
-<div class="messageContainer"
-    >
-    <div class="messageData"
-        >
-        <span class="sender"
-         >
-           monbre
+<div class="messageContainer" *ngFor="let mensaje of mensajes | async">
+    <div class="messageData">
+        <span class="sender">
+            {{mensaje.nombre}} 
         </span>
         <span class="timestamp" 
             >
             {{ timeStamp | date:'medium' }}
         </span>
     </div>
-    <div class="messageContent"
-       >
-        contenido
+    <div class="messageContent">
+       {{mensaje.mensaje}}
     </div>
 </div>

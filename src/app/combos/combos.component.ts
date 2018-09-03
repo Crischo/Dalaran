@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarrerasService } from '../carreras.service';
 
 @Component({
   selector: 'app-combos',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./combos.component.css']
 })
 export class CombosComponent implements OnInit {
-
-  constructor() { }
-
+  title = 'servidor';
+  posts = [];
+  constructor(private dataService: CarrerasService){
+    this.dataService.getData().subscribe(data => {
+      this.posts = data;
+    })
+  }
   ngOnInit() {
   }
 
