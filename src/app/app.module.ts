@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //servicio
 import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
 //AngularFire2
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -13,9 +14,12 @@ import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PieComponent } from './pie/pie.component';
 import { CombosComponent } from './combos/combos.component';
 import { MensajeComponent } from './mensaje/mensaje.component';
+//importo servicios
 import {CarrerasService} from './carreras.service';
+import {PersonaService} from './persona.service';
 
 
+//promesa
 
 @NgModule({
   declarations: [
@@ -28,12 +32,13 @@ import {CarrerasService} from './carreras.service';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, // for database
   ],
   //en providers van los servicios
-  providers: [CarrerasService],
+  providers: [CarrerasService,PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

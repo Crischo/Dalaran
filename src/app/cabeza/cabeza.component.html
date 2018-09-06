@@ -4,13 +4,17 @@
       </button>
   <a id="sala" class="navbar-brand" href="#">Bienvenido</a>
 
-  <img src='../../assets/img.png' class='imgRedonda' />
+  <img src='../../assets/img.png' class='imgRedonda'  (click)="alertPersona()"/>
 
-  
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     
+  <div class="col-12">
+    <select class="form-control">
+      <option *ngFor="let sala of salas" value="sala.Carrera">{{sala.Asignatura}}</option>
+    </select>
+  </div>
 <app-combos></app-combos>
 
     </div>
-   
+
 </nav>
