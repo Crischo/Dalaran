@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers, Response} from '@angular/http';
-import {PostPersona} from './clasePersona';
+import {PostPersona} from '../clases/clasePersona';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +11,14 @@ export class PersonaService {
     console.log('service persona is working!');
    }
    getPersona(): Promise<any> {
+
     let data = {idPersona: 520};
     return this.http.post('http://yavirac.edu.ec/ignug/server/chat/consultar_salas', JSON.stringify(data))
     .toPromise().then(
       respuesta => respuesta.json()
     ).catch(
       error => {
-        Promise.reject(error.message || error)
+        Promise.reject(error.message || error);
       }
     );
   }

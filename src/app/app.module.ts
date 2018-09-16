@@ -15,8 +15,8 @@ import { PieComponent } from './pie/pie.component';
 import { CombosComponent } from './combos/combos.component';
 import { MensajeComponent } from './mensaje/mensaje.component';
 //importo servicios
-import {CarrerasService} from './carreras.service';
-import {PersonaService} from './persona.service';
+import {CarrerasService} from './servicios/carreras.service';
+import {PersonaService} from './servicios/persona.service';
 
 
 //promesa

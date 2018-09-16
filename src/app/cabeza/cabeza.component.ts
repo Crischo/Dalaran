@@ -1,28 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonaService } from '../persona.service';
+import { PersonaService } from '../servicios/persona.service';
 import { Http } from '@angular/http';
 import {Sala} from './../models/sala';
+
 @Component({
   selector: 'app-cabeza',
   templateUrl: './cabeza.component.html',
   styleUrls: ['./cabeza.component.css']
 })
 export class CabezaComponent implements OnInit {
-personaPosts=[];
+personaPosts = [];
 salas: Sala[] = [];
 busy: Promise<any>;
 
-constructor(private personaService: PersonaService, private http: Http) { 
-  
+constructor(private personaService: PersonaService, private http: Http) {
+
 }
 
 ngOnInit() {
 }
 
-alertPersona(){
+alertPersona() {
+
   this.busy = this.personaService.getPersona().then(
-    respuesta=>{
-      this.salas = respuesta as Sala[];    
+    respuesta => {
+      this.salas = respuesta as Sala[];
     }
   ).catch(
     error => {

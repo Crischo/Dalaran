@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CarrerasService } from '../carreras.service';
+import { CarrerasService } from '../servicios/carreras.service';
 
 @Component({
   selector: 'app-combos',
