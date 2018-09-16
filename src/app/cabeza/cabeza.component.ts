@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonaService } from '../servicios/persona.service';
+import { SalasService } from '../servicios/salas.service';
 import { Http } from '@angular/http';
 import {Sala} from './../models/sala';
 
@@ -13,16 +13,17 @@ personaPosts = [];
 salas: Sala[] = [];
 busy: Promise<any>;
 
-constructor(private personaService: PersonaService, private http: Http) {
+id;
+constructor(private personaService: SalasService, private http: Http) {
 
 }
 
 ngOnInit() {
+
+
 }
-
-alertPersona() {
-
-  this.busy = this.personaService.getPersona().then(
+buscarPersona() {
+  this.busy = this.personaService.getPersona(this.id).then(
     respuesta => {
       this.salas = respuesta as Sala[];
     }
@@ -32,6 +33,7 @@ alertPersona() {
     }
   );
 }
+
 }
 
 

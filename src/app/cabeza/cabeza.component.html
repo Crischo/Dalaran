@@ -4,7 +4,7 @@
       </button>
   <a id="sala" class="navbar-brand" href="#">Bienvenido</a>
 
-  <img src='../../assets/img.png' class='imgRedonda'  (click)="alertPersona()"/>
+ <input  placeholder="id" [(ngModel)]="id" (keyup)="buscarPersona()" >
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -13,7 +13,7 @@
       <option *ngFor="let sala of salas" value="sala.Carrera">{{sala.Asignatura}}</option>
     </select>
   </div>
-<app-combos></app-combos>
+<app-combos ></app-combos>
 
     </div>
 

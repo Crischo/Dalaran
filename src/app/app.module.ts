@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//bidireccional
+import { FormsModule } from '@angular/forms';
 //servicio
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
@@ -16,8 +18,8 @@ import { CombosComponent } from './combos/combos.component';
 import { MensajeComponent } from './mensaje/mensaje.component';
 //importo servicios
 import {CarrerasService} from './servicios/carreras.service';
-import {PersonaService} from './servicios/persona.service';
 
+import {SalasService} from './servicios/salas.service';
 
 //promesa
 
@@ -36,9 +38,11 @@ import {PersonaService} from './servicios/persona.service';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, // for database
+
+    FormsModule
   ],
   //en providers van los servicios
-  providers: [CarrerasService,PersonaService],
+  providers: [CarrerasService,SalasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
